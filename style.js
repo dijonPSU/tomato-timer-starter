@@ -3,11 +3,9 @@ let breakButton = document.getElementById('break-btn');
 let timerDisplay = document.getElementById('time-left');
 let studyCountDisplay = document.getElementById('study-count');
 let breakCountDisplay = document.getElementById('break-count');
-let id;
+
+
 let running = false;
-
-
-
 let totalSeconds = 25 * 60;
 let studyCount = 0;
 let breakCount = 0;
@@ -30,13 +28,10 @@ studyButton.addEventListener("click", () => {
         studyCountDisplay.textContent = ++studyCount;
         running = true;
     }
-
-
 });
 
 breakButton.addEventListener("click", () => {
     clearInterval(id);
     running = false;
     breakCountDisplay.textContent = ++breakCount;
-
 });
