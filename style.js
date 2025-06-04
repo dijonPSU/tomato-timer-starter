@@ -23,6 +23,7 @@ studyButton.addEventListener("click", () => {
             if (totalSeconds < 0) {
                 totalSeconds = 25 * 60;
                 clearInterval(id);
+                running = false;
             }
 
         }, 1000);
